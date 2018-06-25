@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            body {background-color: skyblue; font-family: monospace; text-shadow: silver; text-transform: uppercase;}
+            h1 {font-size: 50px;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to the profile of <%= qs.person%></h1>
+        <form id="contact-form" method="POST" action="/contact">
+            <label for="who">Who do you want to contact?</label>
+            <input type="text" name="who" value="<%= qs.person%>">
+            <br>
+            <label for="department">Which department?</label>
+            <input type="text" name="department" value="<%= qs.dept%>">
+            <br>
+            <label for="email">Your email:</label>
+            <input type="email" name="email">
+            <br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
